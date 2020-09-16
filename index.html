@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function applyOnBlurStyle(element) {
+            if (element.value) {
+                element.nextSibling.nextSibling.classList.add("filled-unfocused-input");
+                element.nextSibling.nextSibling.classList.remove("unfilled-unfocused-input");
+            } else {
+                element.nextSibling.nextSibling.classList.remove("filled-unfocused-input");
+                element.nextSibling.nextSibling.classList.add("unfilled-unfocused-input");
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="border">
+            <input id="input" class="input" type="text" onblur="applyOnBlurStyle(this)">
+            <label class="label" for="input">Endereço
+                
+            </label>
+        </div>
+    </div>
+    
+</body>
+</html>
